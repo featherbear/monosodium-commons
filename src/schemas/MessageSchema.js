@@ -1,13 +1,15 @@
 const mongoose = require('mongoose')
 const ThreadSchema = require('./ThreadSchema')
 
+const Schema = mongoose.Schema;
 let MessageSchema = new mongoose.Schema({
   body: String,
   timestamp: Number,
   sender: Number,
-  thread: ThreadSchema,
+  thread: { type: Schema.Types.ObjectId, ref: 'threads' },
   deleted: Boolean,
-  id: String
+  id: String,
+  reply: { type: Schema.Types.ObjectId, ref: 'messages' }
 })
 
 MessageSchema.methods.markAsDeleted = function () {
