@@ -6,6 +6,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "mongoose": "^5.7.7"
+    "mongoose": "^5.12.3"
   }
 }
