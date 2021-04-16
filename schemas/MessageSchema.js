@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 const ThreadSchema = require('./ThreadSchema')
 
 const Schema = mongoose.Schema;
+
 let MessageSchema = new mongoose.Schema({
   body: String,
   timestamp: Number,
