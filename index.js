@@ -1,7 +1,7 @@
 const Schemas = require('./schemas')
-const Models = require('./models')
-
+const Mongo = require('./mongo')
 module.exports = {
   Schemas,
-  Models
+  Mongo,
+  Models: Mongo.Models
 }

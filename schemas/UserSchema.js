@@ -1,9 +1,9 @@
-const mongoose = require('mongoose')
+const { Schema } = require('mongoose')
 const unknown = Object
 
-let UserSchema = new mongoose.Schema({
+let UserSchema = new Schema({
   MSG_AUTH: {
-    username: String,
+    username: { type: String, unique: true, index: true },
     password: Buffer, // crypto
     sessions: [unknown]
   },
