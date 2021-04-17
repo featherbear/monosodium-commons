@@ -10,7 +10,6 @@ const {
   MONGO_PASSWORD
 } = process.env
 
-console.log(MONGO_ADDRESS)
 module.exports = {
   Models: {
     Message: mongoose.model('messages', Schemas.MessageSchema),
