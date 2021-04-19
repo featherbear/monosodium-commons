@@ -3,7 +3,7 @@ const ThreadSchema = require('./ThreadSchema')
 const UserSchema = require('./UserSchema')
 const UserThreadSchema = require('./UserThreadSchema')
 
-module.exports = {
+export default {
   MessageSchema,
   ThreadSchema,
   UserSchema,

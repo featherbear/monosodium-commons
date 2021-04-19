@@ -1,6 +1,6 @@
 // Asymmetrical Encryption
 
-import crypto from 'crypto'
+import * as crypto from 'crypto'
 
 let _privateKey: crypto.KeyObject
 let _publicKey: crypto.KeyObject
