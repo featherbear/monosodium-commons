@@ -77,7 +77,7 @@ export function encryptData (data: Buffer, publicKey?: crypto.KeyObject) {
   )
 }
 
-export function decryptData (data: Buffer, privateKey: crypto.KeyObject) {
+export function decryptData (data: Buffer, privateKey?: crypto.KeyObject) {
   return crypto.privateDecrypt(
     {
       key: privateKey || _privateKey,
