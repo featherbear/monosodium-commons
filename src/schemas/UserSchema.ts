@@ -3,7 +3,7 @@ import type { Document } from 'mongoose'
 
 const unknown = Object
 
-let UserSchema = new Schema({
+let UserSchema = new Schema<UserType>({
   MSG_AUTH: {
     username: { type: String, unique: true, index: true },
     password: Buffer, // crypto

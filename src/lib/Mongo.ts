@@ -1,5 +1,5 @@
 import * as mongoose from 'mongoose'
-import Schemas from '../schemas'
+import * as Schemas from '../schemas'
 import type { MessageType } from '../schemas/MessageSchema'
 import type { ThreadType } from '../schemas/ThreadSchema'
 import type { UserType } from '../schemas/UserSchema'

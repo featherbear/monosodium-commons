@@ -6,7 +6,7 @@ import type { MessageType } from './MessageSchema'
 
 const unknown = Object
 
-let ThreadSchema = new Schema({
+let ThreadSchema = new Schema<ThreadType>({
   id: Number,
   name: String,
   members: [unknown],

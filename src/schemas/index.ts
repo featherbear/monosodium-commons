@@ -1,11 +1,4 @@
-const MessageSchema = require('./MessageSchema')
-const ThreadSchema = require('./ThreadSchema')
-const UserSchema = require('./UserSchema')
-const UserThreadSchema = require('./UserThreadSchema')
-
-export default {
-  MessageSchema,
-  ThreadSchema,
-  UserSchema,
-  UserThreadSchema
-}
+export { default as MessageSchema } from './MessageSchema'
+export { default as ThreadSchema } from './ThreadSchema'
+export { default as UserSchema } from './UserSchema'
+export { default as UserThreadSchema } from './UserThreadSchema'
