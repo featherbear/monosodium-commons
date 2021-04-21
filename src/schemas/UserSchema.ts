@@ -11,7 +11,8 @@ let UserSchema = new Schema<UserType>({
   },
   FB_AUTH: {
     uid: Number,
-    session: unknown
+    session: unknown,
+    sessionCrypt: unknown
   },
   SETTINGS: unknown,
   QUEUE: [unknown]
@@ -25,7 +26,8 @@ export interface UserType extends Document {
   }
   FB_AUTH: {
     uid: Number
-    session: any
+    session: any,
+    sessionCrypt?: any
   }
   SETTINGS: any
   QUEUE: any[]
