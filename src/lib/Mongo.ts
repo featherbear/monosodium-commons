@@ -41,7 +41,8 @@ export async function doConnect() {
       authSource: 'admin',
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      useCreateIndex: true
+      useCreateIndex: true,
+      useFindAndModify: false
     }
   )
 }
