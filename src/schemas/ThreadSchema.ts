@@ -1,23 +1,23 @@
-import { Schema } from 'mongoose'
-import { default as MessageSchema } from './MessageSchema'
+import { Schema, Types } from 'mongoose'
 
 import type { Document } from 'mongoose'
-import type { MessageType } from './MessageSchema'
 
 const unknown = Object
 
 let ThreadSchema = new Schema<ThreadType>({
-  id: Number,
+  utid: Schema.Types.ObjectId,
+  tid: Number,
   name: String,
   members: [unknown],
-  messages: [MessageSchema]
+  messages: [{ type: Schema.Types.ObjectId, ref: 'messages' }],
 })
 
 export interface ThreadType extends Document {
-  id: Number
+  utid: Types.ObjectId
+  tid: Number
   name: String
   members: any[]
-  messages: MessageType[]
+  messages: Types.ObjectId[]
 }
 
 export default ThreadSchema

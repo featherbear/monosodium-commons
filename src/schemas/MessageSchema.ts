@@ -1,6 +1,5 @@
-import { Schema } from 'mongoose'
+import { Schema, Types } from 'mongoose'
 import type { Document } from 'mongoose'
-import type { ThreadType } from './ThreadSchema'
 
 // TODO: Update
 
@@ -10,24 +9,18 @@ let MessageSchema = new Schema<MessageType>({
   sender: Number,
   thread: { type: Schema.Types.ObjectId, ref: 'threads' },
   deleted: Boolean,
-  id: String,
+  mid: String,
   reply: { type: Schema.Types.ObjectId, ref: 'messages' }
 })
 
-MessageSchema.methods.markAsDeleted = function () {
-  this.deleted = true
-  this.save()
-}
 export interface MessageType extends Document {
   body: String
-  timestamp: Number
+  timestamp: Number // Date?
   sender: Number
-  thread: ThreadType
-  deleted: Boolean
-  id: String
-  reply: MessageType
-
-  markAsDeleted()
+  thread: Types.ObjectId
+  mid: String
+  deleted?: Boolean
+  reply?: Types.ObjectId
 }
 
 export default MessageSchema

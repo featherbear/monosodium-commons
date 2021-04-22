@@ -1,4 +1,4 @@
-import { Schema } from 'mongoose'
+import { Schema, Types } from 'mongoose'
 import { default as ThreadSchema } from './ThreadSchema'
 
 import type { Document } from 'mongoose'
@@ -10,7 +10,7 @@ let UserThreadSchema = new Schema<UserThreadType>({
 })
 
 export interface UserThreadType extends Document {
-  user: String
+  user: Types.ObjectId
   threads: ThreadType[]
 }
 
