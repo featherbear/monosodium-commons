@@ -8,7 +8,7 @@ let MessageSchema = new Schema<MessageType>({
   timestamp: Number,
   sender: Number,
   thread: { type: Schema.Types.ObjectId, ref: 'threads' },
-  deleted: Boolean,
+  deleted: Number,
   mid: String,
   reply: { type: Schema.Types.ObjectId, ref: 'messages' }
 })
@@ -19,7 +19,7 @@ export interface MessageType extends Document {
   sender: Number
   thread: Types.ObjectId
   mid: String
-  deleted?: Boolean
+  deleted?: Number // Date
   reply?: Types.ObjectId
 }
 
